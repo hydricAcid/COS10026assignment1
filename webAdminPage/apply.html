@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+    <meta name="description" content="Apply for a job">
+    <meta name="keywords" content="">
+    <meta name="author" content="Darragh Hazell">
+    <title>Job Application</title>
+</head>
+<body>
+    <h1>Job Application</h1>
+    <form>
+        <p>
+            <label for="job_ref">Job Reference Number:</label>
+            <input type="text" name="job_ref" id="job_ref" pattern="([A-z0-9]){5}" title="Must be 5 alphanumeric characters" placeholder="abc12" required="required">
+        </p>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <p>
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" id="first_name" pattern="([A-z0-9]){,20}" title="Max 20 alphanumeric characters" placeholder="John" required="required">
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" id="last_name" pattern="([A-z0-9]){,20}" title="Max 20 alphanumeric characters" placeholder="Johnny" required="required">
+            </p>
+            <p>
+                <label for="dob">Date of Birth</label>
+                <input type="text" name="dob" id="dob" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}" title="DD/MM/YYYY format only" placeholder="dd/mm/yyyy" required="required">
+            </p>
+            <fieldset>
+                <legend>Gender</legend>
+                    <input type="radio" name="gender" id="male" value="male" required="required">
+                    <label for="male">Male</label>
+                    <br>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                    <br>
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="other">Other</label>
+                    <br>
+                    <input type="radio" name="gender" id="undisclosed" value="undisclosed">
+                    <label for="undisclosed">Prefer not to Disclose</label>
+
+            </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>Location</legend>
+            <p>
+                <label>Address</label>
+                <input type="text" name="address" id="address" maxlength="40" title="Max 40 characters" required="required" placeholder="10 John Street">
+            </p>
+            <p>
+                <label>Suburb/Town</label>
+                <input type="text" name="suburb" id="suburb" maxlength="40" title="Max 40 characters" required="required" placeholder="Johntown">
+            </p>
+            <p>
+                <label for="state">State</label>
+                <select name="state" id="state" required="required">
+                    <option value="">Please select</option>
+                    <option value="act">ACT</option>
+                    <option value="nsw">NSW</option>
+                    <option value="qld">QLD</option>
+                    <option value="sa">SA</option>
+                    <option value="tas">TAS</option>
+                    <option value="vic">VIC</option>
+                    <option value="wa">WA</option>
+                </select>
+            </p>
+            <p>
+                <label for="postcode">Postcode</label>
+                <input type="text" name="postcode" id="postcode" pattern="([0-9]){4}" title="4 digits" placeholder="0000" required="required">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Contact</legend>
+            <p>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="john@johnnymail.com" required="required">
+            </p>
+            <p>
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone" pattern="^\({0,1}((0|\+61)(2|4|3|7|8)){0,1}\){0,1}( |-){0,1}[0-9]{2}( |-){0,1}[0-9]{2}( |-){0,1}[0-9]{1}( |-){0,1}[0-9]{3}$" required="required">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Skills</legend>
+            <p>
+                <input type="checkbox" name="web" id="web" value="web" checked>
+                <label for="web">Web</label>
+                <br>
+                <input type="checkbox" name="administration" id="administration" value="administration">
+                <label for="administration">Administration</label>
+                <br>
+                <input type="checkbox" name="html" id="html" value="html">
+                <label for="html">HTML</label>
+                <br>
+                <input type="checkbox" name="css" id="css" value="css">
+                <label for="css">CSS</label>
+                <br>
+                <input type="checkbox" name="javascript" id="javascript" value="javascript">
+                <label for="javascript">JavaScript</label>
+                <br>
+                <input type="checkbox" name="jquery" id="jquery" value="jquery">
+                <label for="jquery">jQuery</label>
+                <br>
+                <input type="checkbox" name="php" id="php" value="php">
+                <label for="php">PHP</label>
+                <br>
+                <input type="checkbox" name="mysql" id="mysql" value="mysql">
+                <label for="mysql">MySQL</label>
+                <br>
+                <input type="checkbox" name="apache" id="apache" value="apache">
+                <label for="apache">Apache</label>
+                <br>
+                <input type="checkbox" name="linux" id="linux" value="linux">
+                <label for="linux">Linux</label>
+                <br>
+                <input type="checkbox" name="dns" id="dns" value="dns">
+                <label for="dns">DNS</label>
+                <br>
+                <input type="checkbox" name="ftp" id="ftp" value="ftp">
+                <label for="ftp">FTP</label>
+                <br>
+                <input type="checkbox" name="skillcheck_other" id="skillcheck_other" value="other">
+                <label for="skillcheck_other">Other</label>
+            </p>
+            <p>
+                <label for="other_skills">Other Skills:</label>
+                <br>
+                <textarea name="other_skills" id="other_skills"></textarea>
+            </p>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
